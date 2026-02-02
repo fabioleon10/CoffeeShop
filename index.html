@@ -3,79 +3,71 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Coffee Shop - O melhor café fresco todas as manhãs">
+    <meta name="theme-color" content="#2a201c">
     <title>Coffee Shop</title>
-    <!-- font awesome  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- css -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-
-
-    <!-- header -->
-
-    <header class="header">
-
-        <a href="#" class="logo">
-            <img src="./assets/images/logo.png" alt="">
+    <!-- Header -->
+    <header class="header" id="header">
+        <a href="#" class="logo" aria-label="Coffee Shop Logo">
+            <img src="./assets/images/logo.png" alt="Coffee Shop Logo">
         </a>
 
-        <nav class="navbar">
-            <div id="close" class="fas fa-times"></div>
+        <nav class="navbar" id="navbar" role="navigation">
+            <button id="close" class="nav-close" aria-label="Fechar menu">
+                <i class="fas fa-times"></i>
+            </button>
 
-            <a href="#" class="nav_item">home</a>
-            <a href="#" class="nav_item">about</a>
-            <a href="#" class="nav_item">menu</a>
-            <a href="#" class="nav_item">contact</a>
-
+            <a href="#home" class="nav-item">home</a>
+            <a href="#about" class="nav-item">about</a>
+            <a href="#menu" class="nav-item">menu</a>
+            <a href="#contact" class="nav-item">contact</a>
         </nav>
 
-        <div id="menu" class="fas fa-bars"></div>
-
+        <button id="menu-btn" class="menu-btn" aria-label="Abrir menu">
+            <i class="fas fa-bars"></i>
+        </button>
     </header>
 
-    <!-- header fim -->
-
-    <!-- home  -->
-
-    <section class="home">
-
-        <div class="content">
-            <h1 class="title">fresh <span>coffee</span> in the <span>morning</span> </h1>
-            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus.</p>
-            <a href="#" class="btn">get started</a>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                fresh <span>coffee</span> in the <span>morning</span>
+            </h1>
+            <p class="hero-description">
+                Descubra o sabor autêntico do café artesanal, preparado com grãos selecionados para despertar seus sentidos.
+            </p>
+            <a href="#menu" class="btn btn-primary">
+                <span>get started</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
         </div>
 
-        <div class="image">
-            <img src="./assets/images/home.png" alt="" data-speed="-3" class="move">
+        <div class="hero-image">
+            <img src="./assets/images/home.png" alt="Xícara de café" data-speed="-3" class="parallax-img">
         </div>
 
+        <div class="hero-decoration">
+            <div class="floating-bean bean-1"></div>
+            <div class="floating-bean bean-2"></div>
+            <div class="floating-bean bean-3"></div>
+        </div>
     </section>
 
-
-    <!-- home fim -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- Overlay para mobile menu -->
+    <div class="overlay" id="overlay"></div>
 
     <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-
-    <!--  js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- JS -->
     <script src="./assets/js/script.js"></script>
 </body>
 
